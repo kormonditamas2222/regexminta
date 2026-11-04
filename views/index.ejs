@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        Profil szerkesztés
     </title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><%= title %></h1>
-    Hello EJS!
+    <h1>Profil szerkesztés</h1>
+    <form method="post">
+        <label>Felhasználónév: <br>
+            <input type="text" name="username">
+        </label>
+        <% if (locals.error) { %>
+            <p><%= locals.error %></p>
+        <% } %>
+        <button type="submit">Módosítás</button>
+    </form>
+    <p><%= locals.username %></p>
 </body>
 </html>
