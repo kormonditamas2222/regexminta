@@ -11,9 +11,19 @@
 <body>
     <h1>Profil szerkesztés</h1>
     <form method="post">
-        <label>Felhasználónév: <br>
+        <label>Felhasználónév:  <br>
             <input type="text" name="username">
         </label>
+        <label>Becenév: <br>
+            <input type="text" name="nickname">
+        </label>
+        <label>Prolfilkép URL: <br>
+            <input type="text" name="url">
+        </label>
+        <label>Szín (hexkódos): <br>
+            <input type="text" name="color">
+        </label>
+        
         <% if (locals.error) { %>
             <p><%= locals.error %></p>
         <% } %>
